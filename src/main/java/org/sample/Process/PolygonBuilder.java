@@ -47,7 +47,7 @@ public class PolygonBuilder {
         double areaP2 = getArea(vectors[2],vectors[3],vectors[0]);
         return new Point(
                 (centerP1.x*areaP1+centerP2.x*areaP2)/(areaP1+areaP2),
-                (centerP1.y*areaP1+ centerP2.y*areaP2)/(areaP1+areaP2)
+                (centerP1.y*areaP1+centerP2.y*areaP2)/(areaP1+areaP2)
         );
     }
 

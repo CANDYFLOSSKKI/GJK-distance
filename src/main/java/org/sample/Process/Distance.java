@@ -9,9 +9,9 @@ import org.sample.Entity.MixPolygon;
 import org.sample.Entity.Point;
 
 public class Distance {
-    public static final Transform defaultTF = new Transform();
+    public static Gjk gjkAlgo = new Gjk();
+    public static Transform defaultTF = new Transform();
     public static double betweenPolygon(MixPolygon p1, MixPolygon p2){
-        Gjk gjkAlgo = new Gjk();
         Separation sep = new Separation();
         if(gjkAlgo.distance(p1.polygon,defaultTF,p2.polygon,defaultTF,sep)){
             return sep.getDistance();
