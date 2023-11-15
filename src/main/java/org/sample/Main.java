@@ -11,13 +11,18 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Position> list = DataReader.read("case1");
+        String strCase = "case3";
+        ArrayList<Position> list = DataReader.read(strCase);
         ArrayList<MixPolygon> polygonList = new ArrayList<>();
         assert list!=null;
         for(Position pos:list) {
             polygonList.add(PolygonBuilder.getPolygon(pos));
         }
+        long stime = System.currentTimeMillis();
         double dist = Devide.search(polygonList);
-        System.out.println(dist);
+        long etime = System.currentTimeMillis();
+        System.out.println("case: "+strCase);
+        System.out.println("dist: "+dist);
+        System.out.println("time: "+(etime-stime)+"ms");
     }
 }
