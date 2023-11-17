@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        String strCase = "case3";
+        String strCase = "case2";
         ArrayList<Position> list = DataReader.read(strCase);
         ArrayList<MixPolygon> polygonList = new ArrayList<>();
         assert list!=null;
