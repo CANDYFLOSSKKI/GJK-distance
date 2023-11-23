@@ -1,4 +1,4 @@
-# GJK-squares-distance
+# GJK-distance
 选题：求解n个凸四边形区域的最短距离问题
 
 要求与目标：
